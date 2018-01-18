@@ -1,0 +1,13 @@
+// This Not logic gate can be successfully executed on the hardware simulator
+// from www.nand2tetris.org. All problems are originally from the textbook,
+// "The Elements of Computing Systems" by Noam Nisan and Shimon Schocken, MIT Press.
+// This solution was written by Keenan Romain.
+
+CHIP Not {
+    // evaluates to not in
+    IN in;
+    OUT out;
+
+    PARTS:
+    Nand (a=in, b=in, out=out);
+}

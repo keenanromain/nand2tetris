@@ -1,0 +1,15 @@
+// This Multi-Way Multiplexor logic gate can be successfully executed on the hardware simulator
+// from www.nand2tetris.org. All problems are originally from the textbook,
+// "The Elements of Computing Systems" by Noam Nisan and Shimon Schocken, MIT Press.
+// This solution was written by Keenan Romain.
+
+CHIP Mux8Way16 {
+    // evaluates to a if not sel, otherwise b
+    IN a[16], b[16], c[16], d[16], e[16], f[16], g[16], h[16], sel[3];
+    OUT out[16];
+
+    PARTS:
+    Mux4Way16 (a=a, b=b, c=c, d=d, sel=sel[0..1], out=case1);
+    Mux4Way16 (a=e, b=f, c=g, d=h, sel=sel[0..1], out=case2);
+    Mux16     (a=case1, b=case2, sel=sel[2], out=out);  
+}

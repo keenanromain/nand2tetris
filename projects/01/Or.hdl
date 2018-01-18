@@ -1,0 +1,15 @@
+// This Or logic gate can be successfully executed on the hardware simulator
+// from www.nand2tetris.org. All problems are originally from the textbook,
+// "The Elements of Computing Systems" by Noam Nisan and Shimon Schocken, MIT Press.
+// This solution was written by Keenan Romain.
+
+CHIP Or {
+    // evaluates to either a or b
+    IN a, b;
+    OUT out;
+
+    PARTS:
+    Not (in=a, out=nota);
+    Not (in=b, out=notb);
+    Nand (a=nota, b=notb, out=out);
+}

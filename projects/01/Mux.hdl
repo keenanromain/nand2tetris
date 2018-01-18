@@ -1,0 +1,16 @@
+// This Multiplexor logic gate can be successfully executed on the hardware simulator
+// from www.nand2tetris.org. All problems are originally from the textbook,
+// "The Elements of Computing Systems" by Noam Nisan and Shimon Schocken, MIT Press.
+// This solution was written by Keenan Romain.
+
+CHIP Mux {
+    // evaluates to a if not sel, otherwise b
+    IN a, b, sel;
+    OUT out;
+
+    PARTS:
+    Not (in=sel, out=notsel);
+    And (a=a, b=notsel, out=aAndNotsel);
+    And (a=sel, b=b, out=selAndb);
+    Or  (a=aAndNotsel, b=selAndb, out=out);
+}
