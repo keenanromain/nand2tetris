@@ -4,7 +4,7 @@ Due to the functional complete nature of the <a href="https://en.wikipedia.org/w
 
 All material originally from the book, <a href="https://www.amazon.com/Elements-Computing-Systems-Building-Principles/dp/0262640686/ref=ed_oe_p">"The Elements of Computing Systems"</a>
 
-All lessons can be found below:
+All lessons can be found at
 http://nand2tetris.org/course.php
 
 For future reference:
