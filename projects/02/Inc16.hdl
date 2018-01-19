@@ -13,20 +13,5 @@ CHIP Inc16 {
     OUT out[16];
 
     PARTS:
-    HalfAdder (a=in[0], b=true, sum=out[0], carry=rem1);
-    HalfAdder (a=in[1], b=rem1, sum=out[1], carry=rem2);
-    HalfAdder (a=in[2], b=rem2, sum=out[2], carry=rem3);
-    HalfAdder (a=in[3], b=rem3, sum=out[3], carry=rem4);
-    HalfAdder (a=in[4], b=rem4, sum=out[4], carry=rem5);
-    HalfAdder (a=in[5], b=rem5, sum=out[5], carry=rem6);
-    HalfAdder (a=in[6], b=rem6, sum=out[6], carry=rem7);
-    HalfAdder (a=in[7], b=rem7, sum=out[7], carry=rem8);
-    HalfAdder (a=in[8], b=rem8, sum=out[8], carry=rem9);
-    HalfAdder (a=in[9], b=rem9, sum=out[9], carry=rem10);
-    HalfAdder (a=in[10], b=rem10, sum=out[10], carry=rem11);
-    HalfAdder (a=in[11], b=rem11, sum=out[11], carry=rem12);
-    HalfAdder (a=in[12], b=rem12, sum=out[12], carry=rem13);
-    HalfAdder (a=in[13], b=rem13, sum=out[13], carry=rem14);
-    HalfAdder (a=in[14], b=rem14, sum=out[14], carry=rem15);
-    HalfAdder (a=in[15], b=rem15, sum=out[15], carry=rem16);
+    Add16(a[0..15]=in[0..15], b[0]=true, out[0..15]=out[0..15]);
 }
