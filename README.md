@@ -1,5 +1,10 @@
 # nand2tetris
 
+Due to the functional complete nature of the <a href="https://en.wikipedia.org/wiki/NAND_logic">nand</a> logic gate,this single chip will serve as the initial building block in a fun excercise of first principles.
+
+All material originally from the book, <a href="https://www.amazon.com/Elements-Computing-Systems-Building-Principles/dp/0262640686/ref=ed_oe_p">"The Elements of Computing Systems"</a>
+
+All lessons can be found below:
 http://nand2tetris.org/course.php
 
 For future reference:
