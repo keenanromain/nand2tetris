@@ -12,3 +12,36 @@
 // the screen should remain fully clear as long as no key is pressed.
 
 // Put your code here.
+
+(START)
+  @SCREEN
+  D=A
+  @pixel // use pixel as a variable that holds the address of the current pixel
+  M=D // initialize it to the top left pixel of the screen
+
+(LOOP)
+  @KBD // keyboard input
+  D=M
+  @WHITE
+  D;JEQ
+
+(BLACK)
+  @pixel
+  M=-1 // black it out
+  @NEXT
+  0;JMP
+
+(WHITE)
+  @pixel
+  M=0 // white it out
+
+(NEXT)
+  @pixel
+  D=M+1
+  M=D // set pixel to pixel + 1
+  @KBD
+  D=A-D
+  @START
+  D;JEQ
+  @LOOP
+  0;JMP
